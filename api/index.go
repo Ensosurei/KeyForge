@@ -5,17 +5,12 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/tu-usuario/keyforge/backend/pkg/generator"
-	"github.com/tu-usuario/keyforge/backend/pkg/verifier"
+	"github.com/Ensosurei/keyforge/backend/pkg/generator"
+	"github.com/Ensosurei/keyforge/backend/pkg/verifier"
 )
 
 type VerifyRequest struct {
 	Password string `json:"password"`
-}
-
-type PassphraseRequest struct {
-	WordCount int    `json:"wordCount"`
-	Separator string `json:"separator"`
 }
 
 func Handler(w http.ResponseWriter, r *http.Request) {
@@ -68,7 +63,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Endpoint /api/passphrase
-	// Busca la sección del endpoint /api/passphrase en api/index.go y actualízala así:
 	if strings.HasSuffix(path, "/passphrase") {
 		if r.Method != http.MethodPost {
 			http.Error(w, "Método no permitido", http.StatusMethodNotAllowed)
