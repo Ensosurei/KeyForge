@@ -1,0 +1,90 @@
+# ==========================================
+# 1. Dependencias y paquetes (Raíz y subcarpetas)
+# ==========================================
+node_modules/
+**/node_modules/
+.pnpm-store/
+.yarn/
+package-lock.json.log
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
+
+# ==========================================
+# 2. Compilados y artefactos del Frontend
+# ==========================================
+dist/
+**/dist/
+dist-ssr/
+*.local
+
+# Cache de Vite
+.vite/
+**/node_modules/.vite/
+.cache/
+
+# ==========================================
+# 3. Compilados y binarios de Go (Backend y API)
+# ==========================================
+*.exe
+*.exe?
+*.dll
+*.so
+*.dylib
+
+bin/
+main
+
+*.out
+*.test
+*.prof
+
+# ==========================================
+# 4. Variables de entorno y llaves secretas
+# ==========================================
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# ==========================================
+# 5. Despliegue y Serverless (Vercel)
+# ==========================================
+.vercel/
+
+# ==========================================
+# 6. Archivos del Sistema Operativo
+# ==========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+
+[Th]umbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+
+# ==========================================
+# 7. Editores y Entornos de Desarrollo
+# ==========================================
+.vscode/
+frontend/.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+.idea/
+*.iws
+*.iml
+*.ipr
+.zed/
+
+# ==========================================
+# 8. Logs y temporales
+# ==========================================
+*.log
+tmp/
+temp/
